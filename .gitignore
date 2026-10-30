@@ -1,0 +1,44 @@
+# Never publish full game/firmware packages or user data
+*.vpk
+*.self
+*.suprx
+*.psp2dmp
+*.log
+*.psu
+*.sav
+*.iso
+*.cso
+*.zip
+*.7z
+*.rar
+sce_sys/
+controls/
+original/
+game/
+gamedata/
+ps2-export/
+eboot.bin
+
+# Generated compiler/verification output
+*.o
+*.elf
+*.a
+*.so
+*.pyc
+__pycache__/
+.pytest_cache/
+*.audit.json
+*.out
+*.tmp
+/payload/
+.DS_Store
+
+# Patch-only compiled bytes are intentional, not game binaries
+*.bin
+!guard/fd_seek_guard.bin
+!builds/combined/payload/payload.bin
+
+# Host tests emit compiled executables without an extension
+/tests/test_*
+!/tests/*.c
+!/tests/*.py
